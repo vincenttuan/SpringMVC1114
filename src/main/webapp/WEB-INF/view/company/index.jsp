@@ -22,7 +22,7 @@
                     <h1>Company</h1>
                     <h2>CRUD</h2>
                 </div>
-                <img width="500" src="${pageContext.request.contextPath}/image/JPA_CRUD_Lab.png"> 
+                <img width="1200" src="${pageContext.request.contextPath}/image/JPA_CRUD_Lab.png"> 
             </div>
         </div>
         <!-- Foot -->
