@@ -25,7 +25,7 @@ public class CompanyController {
     
     @GetMapping("/club/")
     public String club() {
-        return "company/club/";
+        return "company/club_page";
     }
     
 }
