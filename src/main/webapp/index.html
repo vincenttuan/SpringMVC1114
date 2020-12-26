@@ -10,36 +10,52 @@
         <ol>
             <li>
                 <a href="mvc/hello/now">mvc/hello/now</a>
-            </li>
+            </li><p />
             <li>
                 <a href="mvc/hello/greet">mvc/hello/greet</a>
-            </li>
+            </li><p />
             <li>
                 @RequestMapping("/*/ant")<br>
                 <a href="mvc/hello/foo/ant">mvc/hello/foo/ant</a><br>
                 <a href="mvc/hello/bar/ant">mvc/hello/bar/ant</a><br>
-            </li>
+            </li><p />
             <li>
                 @RequestMapping("/ant?")<br>
                 <a href="mvc/hello/ant7">mvc/hello/ant7</a><br>
                 <a href="mvc/hello/ant8">mvc/hello/ant8</a><br>
-            </li>
+            </li><p />
             <li>
                 @RequestMapping("/**/ant")<br>
                 <a href="mvc/hello/a/b/c/ant">mvc/hello/a/b/c/ant</a><br>
                 <a href="mvc/hello/abc/def/ant">mvc/hello/abc/def/ant</a><br>
-            </li>
+            </li><p />
             <li>
                 @RequestMapping(value = {"/tw", "/taiwan"})<br>
                 <a href="mvc/hello/tw">mvc/hello/tw</a><br>
                 <a href="mvc/hello/taiwan">mvc/hello/taiwan</a><br>
-            </li>
-            
+            </li><p />
             <li>
+                @RequestMapping("/add/{x}/{y}")<br>
                 <a href="mvc/hello/add/10/20">mvc/hello/add/10/20</a><br>
                 <a href="mvc/hello/add/30/40">mvc/hello/add/30/40</a><br>
-            </li>
-            
+            </li><p />
+            <li>
+                @RequestMapping("/area/{r}")<br>
+                <a href="mvc/hello/area/">mvc/hello/area/</a> (不支援)<br>
+                <a href="mvc/hello/area/10">mvc/hello/area/10</a><br>
+            </li><p />
+            <li>
+                @RequestMapping("/area2/{r}")<br>
+                <a href="mvc/hello/area2/">mvc/hello/area2/</a> (不支援)<br>
+                <a href="mvc/hello/area2/10">mvc/hello/area2/10</a><br>
+            </li><p />
+            <li>
+                @RequestMapping("/bmi")<br>
+                <a href="mvc/hello/bmi?h=170&w=60">mvc/hello/bmi?h=170&w=60</a><br>
+                <a href="mvc/hello/bmi?h=170">mvc/hello/bmi?h=170</a><br>
+                <a href="mvc/hello/bmi?w=60">mvc/hello/bmi?w=60</a><br>
+                <a href="mvc/hello/bmi">mvc/hello/bmi</a><br>
+            </li><p />
         </ol>
     </body>
 </html>
