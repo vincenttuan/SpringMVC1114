@@ -2,6 +2,7 @@ package com.spring.mvc.controller;
 
 import java.util.Date;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,5 +22,10 @@ public class HelloController {
         return "Hello SpringMVC";
     }
     
+    @RequestMapping("/add/{x}/{y}")
+    @ResponseBody
+    public String add(@PathVariable("x") int x, @PathVariable int y) {
+        return String.format("%d + %d = %d", x, y, (x+y));
+    }
     
 }
