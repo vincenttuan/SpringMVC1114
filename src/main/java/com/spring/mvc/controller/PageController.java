@@ -22,6 +22,8 @@ public class PageController {
         Double bmi = bmiService.calcBmi(h.get(), w.get());
         ModelAndView mv = new ModelAndView();
         mv.addObject("bmi", bmi); // 將要給 jsp 的資料放入 Model
+        mv.addObject("h", h.get()); // 將要給 jsp 的資料放入 Model
+        mv.addObject("w", w.get()); // 將要給 jsp 的資料放入 Model
         mv.setViewName("bmi_page"); // 設定 jsp 檔名
         return mv;
     }
@@ -32,6 +34,8 @@ public class PageController {
                           @RequestParam Optional<Double> w, Model model) {
         Double bmi = bmiService.calcBmi(h.get(), w.get());
         model.addAttribute("bmi", bmi); // 將要給 jsp 的資料放入 Model 
+        model.addAttribute("h", h.get()); // 將要給 jsp 的資料放入 Model 
+        model.addAttribute("w", w.get()); // 將要給 jsp 的資料放入 Model 
         return "bmi_page"; // 設定 jsp 檔名
     }
     
