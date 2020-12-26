@@ -6,7 +6,7 @@
     <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
     <title>Company</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
-    <link rel="stylesheet" href="/SpringMVC1114/css/layouts/side-menu/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layouts/side-menu/styles.css">
 </head>
 <body>
 
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<script src="/SpringMVC1114/js/ui.js"></script>
+<script src="${pageContext.request.contextPath}/js/ui.js"></script>
 
 </body>
 </html>
