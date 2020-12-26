@@ -1,6 +1,7 @@
 package com.spring.mvc.controller;
 
 import java.util.Date;
+import java.util.Map;
 import java.util.Optional;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -84,19 +85,25 @@ public class HelloController {
     @ResponseBody
     public String bmi(@RequestParam Optional<Double> h,
                       @RequestParam Optional<Double> w) {
-        
         if(!h.isPresent()) {
             return "h = ?";
         }
         if(!w.isPresent()) {
             return "w = ?";
         }
-        
         double bmi = w.get() / Math.pow(h.get()/100, 2);
         return String.format("%.2f", bmi);
-        
-        
     }
     
+    // 將參數放入集合
+    // bmi2?h=170&w=60 的參數內容轉換成Map格式 {h:170, w:60}
+    @RequestMapping("/bmi2")
+    @ResponseBody
+    public String bmi2(@RequestParam Map<String, String> params) {
+        double h = Double.parseDouble(params.get("h"));
+        double w = Double.parseDouble(params.get("w"));
+        double bmi = w / Math.pow(h/100, 2);
+        return String.format("%.2f", bmi);
+    }
     
 }
