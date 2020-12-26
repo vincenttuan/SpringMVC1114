@@ -10,7 +10,15 @@
     </head>
     <body style="padding: 20px">
         <h1>BMI List</h1>
-        <h2>${ list }</h2>
+        <h2>
+            日期:
+            <jsp:useBean id="now" class="java.util.Date" />
+            <fmt:formatDate var="today" value="${ now }" pattern="yyyy/MM/dd H:m:s E" />
+            ${ today }<br>
+            日期:
+            <fmt:formatDate var="today2" value="${ now }" pattern="yyyy/MM/dd a h:m:s E" />
+            ${ today2 }
+        </h2>
         <table class="pure-table pure-table-bordered">
             <thead>
                 <tr>
@@ -42,7 +50,8 @@
                     <td>${ item['w'] }</td>
                     <td>${ item['bmi'] }</td>
                     <td>
-                        <fmt:formatNumber pattern=".00" value="${ item['bmi'] }" />
+                        <fmt:formatNumber var="bmi" pattern=".00" value="${ item['bmi'] }" />
+                        ${ bmi }
                     </td>
                 </tr>
                 </c:forEach>
