@@ -9,7 +9,9 @@
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
           
     <!-- 引用外部配置 -->
-    <context:property-placeholder location="classpath:derby_lab_jpa.properties"></context:property-placeholder>
+    <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="location" value="classpath:derby_lab_jpa.properties"></property>
+    </bean>
     
     <!-- 建立資料源 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
