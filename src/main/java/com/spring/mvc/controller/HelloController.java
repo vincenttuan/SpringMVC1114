@@ -114,4 +114,18 @@ public class HelloController {
     public String getId(@RequestParam(name = "id", required = true) List<String> ids) {
         return ids.toString() + ", size=" + ids.size();
     }
+    
+    // @PathVariable + @RequestParam
+    // mvc/hello/ticket/man?price=100 -> man -> 100
+    // mvc/hello/ticket/female?price=100 -> female -> 80
+    @RequestMapping("/ticket/{sex}")
+    @ResponseBody
+    public String ticket(@PathVariable String sex, 
+                         @RequestParam(required = true) Double price) {
+        if(sex.equals("man")) price = price * 1;
+        else if(sex.equals("female")) price = price * 0.8;
+        else return "sex error";
+        
+        return sex + " -> " + price;
+    }
 }
