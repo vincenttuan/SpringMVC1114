@@ -28,4 +28,30 @@ public class HelloController {
         return String.format("%d + %d = %d", x, y, (x+y));
     }
     
+    /*
+        Ant 語法
+        * : 任意多字
+        ? : 任意一字
+        ** : 任意多組資料夾
+    */
+    @RequestMapping("/*/ant")
+    @ResponseBody
+    public String antPath1() {
+        return "ant path 1";
+    }
+    
+    @RequestMapping("/ant?")
+    @ResponseBody
+    public String antPath2() {
+        return "ant path 2";
+    }
+    
+    @RequestMapping("/**/ant")
+    @ResponseBody
+    public String antPath3() {
+        return "ant path 3";
+    }
+    
+    
+    
 }
