@@ -13,4 +13,19 @@ public class CompanyController {
         return "company/index";
     }
     
+    @GetMapping("/dept/")
+    public String dept() {
+        return "company/dept_page";
+    }
+    
+    @GetMapping("/emp/")
+    public String emp() {
+        return "company/emp_page";
+    }
+    
+    @GetMapping("/club/")
+    public String club() {
+        return "company/club/";
+    }
+    
 }
