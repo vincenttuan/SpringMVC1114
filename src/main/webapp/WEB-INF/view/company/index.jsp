@@ -1,39 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-    <title>Company</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layouts/side-menu/styles.css">
+    <%@include file="include/header.jspf" %>
 </head>
 <body>
 
 <div id="layout">
     <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
-
-    <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">Company</a>
-
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-
-                <li class="pure-menu-item menu-item-divided pure-menu-selected">
-                    <a href="#" class="pure-menu-link">Services</a>
-                </li>
-
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
+    <%@include file="include/toggle.jspf" %>
+    <!-- Menu -->
+    <%@include file="include/menu.jspf" %>
+    <!-- Main(Content) -->
     <div id="main">
         <div class="header">
             <h1>Page Title</h1>
@@ -74,7 +51,7 @@
     </div>
 </div>
 
-<script src="${pageContext.request.contextPath}/js/ui.js"></script>
+<%@include file="include/footer.jspf" %>
 
 </body>
 </html>
