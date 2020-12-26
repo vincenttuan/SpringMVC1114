@@ -6,13 +6,13 @@
         <!-- menu-item-divided pure-menu-selected -->
         <ul class="pure-menu-list">
             <li class="pure-menu-item">
-                <a href="${pageContext.request.contextPath}/mvc/company/dept" class="pure-menu-link">部門</a>
+                <a href="${pageContext.request.contextPath}/mvc/company/dept/" class="pure-menu-link">部門</a>
             </li>
             <li class="pure-menu-item">
-                <a href="${pageContext.request.contextPath}/mvc/company/emp" class="pure-menu-link">員工</a>
+                <a href="${pageContext.request.contextPath}/mvc/company/emp/" class="pure-menu-link">員工</a>
             </li>
             <li class="pure-menu-item">
-                <a href="${pageContext.request.contextPath}/mvc/company/club" class="pure-menu-link">社團</a>
+                <a href="${pageContext.request.contextPath}/mvc/company/club/" class="pure-menu-link">社團</a>
             </li>
 
         </ul>
