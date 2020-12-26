@@ -32,6 +32,7 @@
                     <th>身高</th>
                     <th>體重</th>
                     <th>BMI</th>
+                    <th>BMI(小數點到第二位)</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +41,9 @@
                     <td>${ item['h'] }</td>
                     <td>${ item['w'] }</td>
                     <td>${ item['bmi'] }</td>
+                    <td>
+                        <fmt:formatNumber pattern=".00" value="${ item['bmi'] }" />
+                    </td>
                 </tr>
                 </c:forEach>
             </tbody>
