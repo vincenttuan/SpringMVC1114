@@ -22,12 +22,6 @@ public class HelloController {
         return "Hello SpringMVC";
     }
     
-    @RequestMapping("/add/{x}/{y}")
-    @ResponseBody
-    public String add(@PathVariable("x") int x, @PathVariable int y) {
-        return String.format("%d + %d = %d", x, y, (x+y));
-    }
-    
     /*
         Ant 語法
         * : 任意多字
@@ -50,6 +44,12 @@ public class HelloController {
     @ResponseBody
     public String antPath3() {
         return "ant path 3";
+    }
+    
+    @RequestMapping("/add/{x}/{y}")
+    @ResponseBody
+    public String add(@PathVariable("x") int x, @PathVariable int y) {
+        return String.format("%d + %d = %d", x, y, (x+y));
     }
     
     
