@@ -1,6 +1,8 @@
 package com.spring.mvc.controller;
 
 import com.spring.mvc.service.BmiService;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,6 +39,15 @@ public class PageController {
         model.addAttribute("h", h.get()); // 將要給 jsp 的資料放入 Model 
         model.addAttribute("w", w.get()); // 將要給 jsp 的資料放入 Model 
         return "bmi_page"; // 設定 jsp 檔名
+    }
+    
+    @RequestMapping("/bmi/list")
+    public String getBmiList(@RequestParam(name = "h", required = true) Optional<List<String>> hList, 
+                             @RequestParam(name = "w", required = true) Optional<List<String>> wList,
+                             Model model) {
+        List<Map<String, Double>> list = bmiService.calcBmi(hList.get(), wList.get());
+        model.addAttribute("list", list);
+        return "bmi_list_page"; // 設定 jsp 檔名
     }
     
 }
