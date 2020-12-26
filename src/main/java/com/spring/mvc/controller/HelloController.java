@@ -46,6 +46,12 @@ public class HelloController {
         return "ant path 3";
     }
     
+    @RequestMapping(value = {"/tw", "/taiwan"})
+    @ResponseBody
+    public String welcome() {
+        return "Taiwan welcome U";
+    }
+    
     @RequestMapping("/add/{x}/{y}")
     @ResponseBody
     public String add(@PathVariable("x") int x, @PathVariable int y) {
