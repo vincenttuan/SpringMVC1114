@@ -1,6 +1,7 @@
 package com.spring.mvc.controller;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import org.springframework.stereotype.Controller;
@@ -106,4 +107,11 @@ public class HelloController {
         return String.format("%.2f", bmi);
     }
     
+    // 連續參數
+    // getId?id=1,3,5,7,9
+    @RequestMapping("/getId")
+    @ResponseBody
+    public String getId(@RequestParam(name = "id", required = true) List<String> ids) {
+        return ids.toString() + ", size=" + ids.size();
+    }
 }
